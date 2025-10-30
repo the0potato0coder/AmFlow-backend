@@ -23,7 +23,8 @@ WORKDIR /app
 
 # Copy the built JAR file from the 'build' stage (Stage 1)
 # !! IMPORTANT: Make sure this JAR file name is correct !!
-COPY --from=build /app/target/your-app-name-0.0.1.jar app.jar
+# !! IMPORTANT: Make sure this JAR file name is correct !!
+COPY --from=build /app/target/userservice-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port your Spring Boot app runs on (default is 8080)
 EXPOSE 8080
